@@ -9,10 +9,10 @@ import (
 	"math"
 	"sync"
 
-	"github.com/bitcoinsv/bsvd/chaincfg/chainhash"
-	"github.com/bitcoinsv/bsvd/txscript"
-	"github.com/bitcoinsv/bsvd/wire"
-	"github.com/bitcoinsv/bsvutil"
+	"github.com/yaochaoutokyo/bsvd/chaincfg/chainhash"
+	"github.com/yaochaoutokyo/bsvd/txscript"
+	"github.com/yaochaoutokyo/bsvd/wire"
+	"github.com/yaochaoutokyo/bsvutil"
 )
 
 // ln2Squared is simply the square of the natural log of 2.

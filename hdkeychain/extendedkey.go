@@ -18,11 +18,11 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/bitcoinsv/bsvd/bsvec"
-	"github.com/bitcoinsv/bsvd/chaincfg"
-	"github.com/bitcoinsv/bsvd/chaincfg/chainhash"
-	"github.com/bitcoinsv/bsvutil"
-	"github.com/bitcoinsv/bsvutil/base58"
+	"github.com/yaochaoutokyo/bsvd/bsvec"
+	"github.com/yaochaoutokyo/bsvd/chaincfg"
+	"github.com/yaochaoutokyo/bsvd/chaincfg/chainhash"
+	"github.com/yaochaoutokyo/bsvutil"
+	"github.com/yaochaoutokyo/bsvutil/base58"
 )
 
 const (

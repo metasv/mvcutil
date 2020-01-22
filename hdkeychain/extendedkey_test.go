@@ -16,7 +16,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/bitcoinsv/bsvd/chaincfg"
+	"github.com/yaochaoutokyo/bsvd/chaincfg"
 )
 
 // TestBIP0032Vectors tests the vectors provided by [BIP32] to ensure the

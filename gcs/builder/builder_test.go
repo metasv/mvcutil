@@ -9,10 +9,10 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/bitcoinsv/bsvd/chaincfg/chainhash"
-	"github.com/bitcoinsv/bsvd/wire"
-	"github.com/bitcoinsv/bsvutil/gcs"
-	"github.com/bitcoinsv/bsvutil/gcs/builder"
+	"github.com/yaochaoutokyo/bsvd/chaincfg/chainhash"
+	"github.com/yaochaoutokyo/bsvd/wire"
+	"github.com/yaochaoutokyo/bsvutil/gcs"
+	"github.com/yaochaoutokyo/bsvutil/gcs/builder"
 )
 
 var (

@@ -1,4 +1,4 @@
-// Copyright (c) 2018 The bitcoinsv developers
+// Copyright (c) 2018 The yaochaoutokyo developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -10,9 +10,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/bitcoinsv/bsvd/chaincfg/chainhash"
-	"github.com/bitcoinsv/bsvd/wire"
-	"github.com/bitcoinsv/bsvutil/merkleblock"
+	"github.com/yaochaoutokyo/bsvd/chaincfg/chainhash"
+	"github.com/yaochaoutokyo/bsvd/wire"
+	"github.com/yaochaoutokyo/bsvutil/merkleblock"
 )
 
 // TestNewMerkleBlockFromMsg tests decoding of a partial merkle tree from

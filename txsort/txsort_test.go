@@ -11,8 +11,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/bitcoinsv/bsvd/wire"
-	"github.com/bitcoinsv/bsvutil/txsort"
+	"github.com/yaochaoutokyo/bsvd/wire"
+	"github.com/yaochaoutokyo/bsvutil/txsort"
 )
 
 // TestSort ensures the transaction sorting works according to the BIP.

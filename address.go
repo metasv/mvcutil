@@ -8,9 +8,9 @@ import (
 	"encoding/hex"
 	"errors"
 
-	"github.com/bitcoinsv/bsvd/bsvec"
-	"github.com/bitcoinsv/bsvd/chaincfg"
-	"github.com/bitcoinsv/bsvutil/base58"
+	"github.com/yaochaoutokyo/bsvd/bsvec"
+	"github.com/yaochaoutokyo/bsvd/chaincfg"
+	"github.com/yaochaoutokyo/bsvutil/base58"
 	"golang.org/x/crypto/ripemd160"
 )
 

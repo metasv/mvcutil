@@ -7,8 +7,8 @@ package hdkeychain_test
 import (
 	"fmt"
 
-	"github.com/bitcoinsv/bsvd/chaincfg"
-	"github.com/bitcoinsv/bsvutil/hdkeychain"
+	"github.com/yaochaoutokyo/bsvd/chaincfg"
+	"github.com/yaochaoutokyo/bsvutil/hdkeychain"
 )
 
 // This example demonstrates how to generate a cryptographically random seed

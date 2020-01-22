@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2016 The btcsuite developers
-// Copyright (c) 2018 The bitcoinsv developers
+// Copyright (c) 2018 The yaochaoutokyo developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
@@ -10,11 +10,11 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/bitcoinsv/bsvd/chaincfg/chainhash"
-	"github.com/bitcoinsv/bsvd/wire"
-	"github.com/bitcoinsv/bsvutil"
-	"github.com/bitcoinsv/bsvutil/bloom"
-	"github.com/bitcoinsv/bsvutil/merkleblock"
+	"github.com/yaochaoutokyo/bsvd/chaincfg/chainhash"
+	"github.com/yaochaoutokyo/bsvd/wire"
+	"github.com/yaochaoutokyo/bsvutil"
+	"github.com/yaochaoutokyo/bsvutil/bloom"
+	"github.com/yaochaoutokyo/bsvutil/merkleblock"
 )
 
 // TestMerkleBlock3 tests merkleblock encoding using bloom filter. This test
