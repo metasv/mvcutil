@@ -11,7 +11,7 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/yaochaoutokyo/bsvutil/gcs"
+	"github.com/metasv/bsvutil/gcs"
 )
 
 var (

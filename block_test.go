@@ -12,9 +12,9 @@ import (
 	"time"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/yaochaoutokyo/bsvd/chaincfg/chainhash"
-	"github.com/yaochaoutokyo/bsvd/wire"
-	"github.com/yaochaoutokyo/bsvutil"
+	"github.com/metasv/bsvd/chaincfg/chainhash"
+	"github.com/metasv/bsvd/wire"
+	"github.com/metasv/bsvutil"
 )
 
 // TestBlock tests the API for Block.

@@ -11,8 +11,8 @@ import (
 	"testing"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/yaochaoutokyo/bsvd/chaincfg/chainhash"
-	"github.com/yaochaoutokyo/bsvutil"
+	"github.com/metasv/bsvd/chaincfg/chainhash"
+	"github.com/metasv/bsvutil"
 )
 
 // TestTx tests the API for Tx.

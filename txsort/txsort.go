@@ -11,8 +11,8 @@ import (
 	"bytes"
 	"sort"
 
-	"github.com/yaochaoutokyo/bsvd/chaincfg/chainhash"
-	"github.com/yaochaoutokyo/bsvd/wire"
+	"github.com/metasv/bsvd/chaincfg/chainhash"
+	"github.com/metasv/bsvd/wire"
 )
 
 // InPlaceSort modifies the passed transaction inputs and outputs to be sorted

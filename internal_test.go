@@ -12,9 +12,9 @@ interface. The functions are only exported while the tests are being run.
 package bsvutil
 
 import (
-	"github.com/yaochaoutokyo/bsvd/bsvec"
-	"github.com/yaochaoutokyo/bsvd/chaincfg"
-	"github.com/yaochaoutokyo/bsvutil/base58"
+	"github.com/metasv/bsvd/bsvec"
+	"github.com/metasv/bsvd/chaincfg"
+	"github.com/metasv/bsvutil/base58"
 	"golang.org/x/crypto/ripemd160"
 	"strings"
 )

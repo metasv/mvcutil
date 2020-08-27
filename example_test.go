@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/yaochaoutokyo/bsvutil"
+	"github.com/metasv/bsvutil"
 )
 
 func ExampleAmount() {

@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/yaochaoutokyo/bsvd/chaincfg/chainhash"
-	"github.com/yaochaoutokyo/bsvd/wire"
+	"github.com/metasv/bsvd/chaincfg/chainhash"
+	"github.com/metasv/bsvd/wire"
 )
 
 // OutOfRangeError describes an error due to accessing an element that is out

@@ -12,7 +12,7 @@ import (
 	"testing"
 	"unicode"
 
-	"github.com/yaochaoutokyo/bsvutil"
+	"github.com/metasv/bsvutil"
 )
 
 // TestAppDataDir tests the API for AppDataDir to ensure it gives expected

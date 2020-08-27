@@ -1,14 +1,14 @@
 // Copyright (c) 2013-2016 The btcsuite developers
-// Copyright (c) 2018 The yaochaoutokyo developers
+// Copyright (c) 2018 The metasv developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
 package merkleblock
 
 import (
-	"github.com/yaochaoutokyo/bsvd/blockchain"
-	"github.com/yaochaoutokyo/bsvd/chaincfg/chainhash"
-	"github.com/yaochaoutokyo/bsvd/wire"
+	"github.com/metasv/bsvd/blockchain"
+	"github.com/metasv/bsvd/chaincfg/chainhash"
+	"github.com/metasv/bsvd/wire"
 )
 
 // MaxTxnCount defines the maximum number of transactions we will process before

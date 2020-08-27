@@ -9,9 +9,9 @@ import (
 	"errors"
 	"sort"
 
-	"github.com/yaochaoutokyo/bsvd/chaincfg/chainhash"
-	"github.com/yaochaoutokyo/bsvd/wire"
-	"github.com/yaochaoutokyo/bsvutil"
+	"github.com/metasv/bsvd/chaincfg/chainhash"
+	"github.com/metasv/bsvd/wire"
+	"github.com/metasv/bsvutil"
 )
 
 // Coin represents a spendable transaction outpoint

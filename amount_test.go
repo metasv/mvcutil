@@ -8,7 +8,7 @@ import (
 	"math"
 	"testing"
 
-	. "github.com/yaochaoutokyo/bsvutil"
+	. "github.com/metasv/bsvutil"
 )
 
 func TestAmountCreation(t *testing.T) {

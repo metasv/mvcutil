@@ -1,16 +1,16 @@
 // Copyright (c) 2013-2016 The btcsuite developers
-// Copyright (c) 2018 The yaochaoutokyo developers
+// Copyright (c) 2018 The metasv developers
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
 package merkleblock
 
 import (
-	"github.com/yaochaoutokyo/bsvd/blockchain"
-	"github.com/yaochaoutokyo/bsvd/chaincfg/chainhash"
-	"github.com/yaochaoutokyo/bsvd/wire"
-	"github.com/yaochaoutokyo/bsvutil"
-	"github.com/yaochaoutokyo/bsvutil/bloom"
+	"github.com/metasv/bsvd/blockchain"
+	"github.com/metasv/bsvd/chaincfg/chainhash"
+	"github.com/metasv/bsvd/wire"
+	"github.com/metasv/bsvutil"
+	"github.com/metasv/bsvutil/bloom"
 )
 
 // MerkleBlock is used to house intermediate information needed to generate a

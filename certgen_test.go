@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/yaochaoutokyo/bsvutil"
+	"github.com/metasv/bsvutil"
 	//"github.com/davecgh/go-spew/spew"
 )
 

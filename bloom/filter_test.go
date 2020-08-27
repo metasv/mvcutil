@@ -9,10 +9,10 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/yaochaoutokyo/bsvd/chaincfg/chainhash"
-	"github.com/yaochaoutokyo/bsvd/wire"
-	"github.com/yaochaoutokyo/bsvutil"
-	"github.com/yaochaoutokyo/bsvutil/bloom"
+	"github.com/metasv/bsvd/chaincfg/chainhash"
+	"github.com/metasv/bsvd/wire"
+	"github.com/metasv/bsvutil"
+	"github.com/metasv/bsvutil/bloom"
 )
 
 // TestFilterLarge ensures a maximum sized filter can be created.
