@@ -9,9 +9,9 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/metasv/bsvd/chaincfg/chainhash"
-	"github.com/metasv/bsvd/wire"
-	"github.com/metasv/bsvutil/bloom"
+	"github.com/metasv/mvcd/chaincfg/chainhash"
+	"github.com/metasv/mvcd/wire"
+	"github.com/metasv/mvcutil/bloom"
 )
 
 // This example demonstrates how to create a new bloom filter, add a transaction

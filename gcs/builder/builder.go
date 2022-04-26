@@ -10,10 +10,10 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/metasv/bsvd/chaincfg/chainhash"
-	"github.com/metasv/bsvd/txscript"
-	"github.com/metasv/bsvd/wire"
-	"github.com/metasv/bsvutil/gcs"
+	"github.com/metasv/mvcd/chaincfg/chainhash"
+	"github.com/metasv/mvcd/txscript"
+	"github.com/metasv/mvcd/wire"
+	"github.com/metasv/mvcutil/gcs"
 )
 
 const (

@@ -16,7 +16,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/metasv/bsvd/chaincfg"
+	"github.com/metasv/mvcd/chaincfg"
 )
 
 // TestBIP0032Vectors tests the vectors provided by [BIP32] to ensure the

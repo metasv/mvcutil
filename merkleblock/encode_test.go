@@ -10,11 +10,11 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/metasv/bsvd/chaincfg/chainhash"
-	"github.com/metasv/bsvd/wire"
-	"github.com/metasv/bsvutil"
-	"github.com/metasv/bsvutil/bloom"
-	"github.com/metasv/bsvutil/merkleblock"
+	"github.com/metasv/mvcd/chaincfg/chainhash"
+	"github.com/metasv/mvcd/wire"
+	"github.com/metasv/mvcutil"
+	"github.com/metasv/mvcutil/bloom"
+	"github.com/metasv/mvcutil/merkleblock"
 )
 
 // TestMerkleBlock3 tests merkleblock encoding using bloom filter. This test
@@ -34,7 +34,7 @@ func TestNewMerkleBlockWithFilter(t *testing.T) {
 		t.Errorf("TestMerkleBlock3 DecodeString failed: %v", err)
 		return
 	}
-	blk, err := bsvutil.NewBlockFromBytes(blockBytes)
+	blk, err := mvcutil.NewBlockFromBytes(blockBytes)
 	if err != nil {
 		t.Errorf("TestMerkleBlock3 NewBlockFromBytes failed: %v", err)
 		return
@@ -141,7 +141,7 @@ func TestValidNewMerkleBlockWithTxnSet(t *testing.T) {
 				return
 			}
 
-			blk, err := bsvutil.NewBlockFromBytes(blockBytes)
+			blk, err := mvcutil.NewBlockFromBytes(blockBytes)
 
 			if err != nil {
 				t.Errorf("NewBlockFromBytes failed: %v", err)
@@ -221,7 +221,7 @@ func TestInvalidNewMerkleBlockWithTxnSet(t *testing.T) {
 				return
 			}
 
-			blk, err := bsvutil.NewBlockFromBytes(blockBytes)
+			blk, err := mvcutil.NewBlockFromBytes(blockBytes)
 
 			if err != nil {
 				t.Errorf("NewBlockFromBytes failed: %v", err)

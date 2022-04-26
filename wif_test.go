@@ -2,14 +2,14 @@
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
-package bsvutil_test
+package mvcutil_test
 
 import (
 	"testing"
 
-	"github.com/metasv/bsvd/bsvec"
-	"github.com/metasv/bsvd/chaincfg"
-	. "github.com/metasv/bsvutil"
+	"github.com/metasv/mvcd/bsvec"
+	"github.com/metasv/mvcd/chaincfg"
+	. "github.com/metasv/mvcutil"
 )
 
 func TestEncodeDecodeWIF(t *testing.T) {

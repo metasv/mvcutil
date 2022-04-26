@@ -2,7 +2,7 @@
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
-package bsvutil
+package mvcutil
 
 import (
 	"errors"
@@ -72,7 +72,7 @@ func round(f float64) Amount {
 // NewAmount is for specifically for converting BSV to Satoshi.
 // For creating a new Amount with an int64 value which denotes a quantity of Satoshi,
 // do a simple type conversion from type int64 to Amount.
-// See GoDoc for example: http://godoc.org/github.com/metasv/bsvutil#example-Amount
+// See GoDoc for example: http://godoc.org/github.com/metasv/mvcutil#example-Amount
 func NewAmount(f float64) (Amount, error) {
 	// The amount is only considered invalid if it cannot be represented
 	// as an integer type.  This may happen if f is NaN or +-Infinity.

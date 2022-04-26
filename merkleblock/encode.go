@@ -6,11 +6,11 @@
 package merkleblock
 
 import (
-	"github.com/metasv/bsvd/blockchain"
-	"github.com/metasv/bsvd/chaincfg/chainhash"
-	"github.com/metasv/bsvd/wire"
-	"github.com/metasv/bsvutil"
-	"github.com/metasv/bsvutil/bloom"
+	"github.com/metasv/mvcd/blockchain"
+	"github.com/metasv/mvcd/chaincfg/chainhash"
+	"github.com/metasv/mvcd/wire"
+	"github.com/metasv/mvcutil"
+	"github.com/metasv/mvcutil/bloom"
 )
 
 // MerkleBlock is used to house intermediate information needed to generate a
@@ -92,7 +92,7 @@ func TxInSet(tx *chainhash.Hash, set []*chainhash.Hash) bool {
 
 // NewMerkleBlockWithFilter returns a new *wire.MsgMerkleBlock and an array of the matched
 // transaction index numbers based on the passed block and bloom filter.
-func NewMerkleBlockWithFilter(block *bsvutil.Block, filter *bloom.Filter) (*wire.MsgMerkleBlock, []uint32) {
+func NewMerkleBlockWithFilter(block *mvcutil.Block, filter *bloom.Filter) (*wire.MsgMerkleBlock, []uint32) {
 
 	numTx := uint32(len(block.Transactions()))
 	mBlock := MerkleBlock{
@@ -118,7 +118,7 @@ func NewMerkleBlockWithFilter(block *bsvutil.Block, filter *bloom.Filter) (*wire
 
 // NewMerkleBlockWithTxnSet returns a new *wire.MsgMerkleBlock containing a
 // partial merkle tree built using the list of transactions provided
-func NewMerkleBlockWithTxnSet(block *bsvutil.Block, txnSet []*chainhash.Hash) (*wire.MsgMerkleBlock, []uint32) {
+func NewMerkleBlockWithTxnSet(block *mvcutil.Block, txnSet []*chainhash.Hash) (*wire.MsgMerkleBlock, []uint32) {
 
 	numTx := uint32(len(block.Transactions()))
 	mBlock := MerkleBlock{
@@ -145,7 +145,7 @@ func NewMerkleBlockWithTxnSet(block *bsvutil.Block, txnSet []*chainhash.Hash) (*
 
 // calcBlock calculates the merkleBlock when created from either a TxnSet or
 // by a bloom.Filter
-func (m *MerkleBlock) calcBlock(block *bsvutil.Block) *wire.MsgMerkleBlock {
+func (m *MerkleBlock) calcBlock(block *mvcutil.Block) *wire.MsgMerkleBlock {
 
 	// Calculate the number of merkle branches (height) in the tree.
 	height := uint32(0)

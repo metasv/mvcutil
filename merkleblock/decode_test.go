@@ -10,9 +10,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/metasv/bsvd/chaincfg/chainhash"
-	"github.com/metasv/bsvd/wire"
-	"github.com/metasv/bsvutil/merkleblock"
+	"github.com/metasv/mvcd/chaincfg/chainhash"
+	"github.com/metasv/mvcd/wire"
+	"github.com/metasv/mvcutil/merkleblock"
 )
 
 // TestNewMerkleBlockFromMsg tests decoding of a partial merkle tree from
@@ -89,10 +89,10 @@ func TestNewMerkleBlockFromMsg(t *testing.T) {
 
 			rbuf := bytes.NewReader(dec)
 
-			err = msg.BsvDecode(rbuf, wire.ProtocolVersion, wire.BaseEncoding)
+			err = msg.mvcdecode(rbuf, wire.ProtocolVersion, wire.BaseEncoding)
 
 			if err != nil {
-				t.Errorf("BsvDecode error: %v\n", err)
+				t.Errorf("mvcdecode error: %v\n", err)
 				return
 			}
 

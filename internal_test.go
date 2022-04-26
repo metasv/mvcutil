@@ -3,17 +3,17 @@
 // license that can be found in the LICENSE file.
 
 /*
-This test file is part of the bsvutil package rather than than the
-bsvutil_test package so it can bridge access to the internals to properly test
+This test file is part of the mvcutil package rather than than the
+mvcutil_test package so it can bridge access to the internals to properly test
 cases which are either not possible or can't reliably be tested via the public
 interface. The functions are only exported while the tests are being run.
 */
 
-package bsvutil
+package mvcutil
 
 import (
-	"github.com/metasv/bsvd/bsvec"
-	"github.com/metasv/bsvutil/base58"
+	"github.com/metasv/mvcd/bsvec"
+	"github.com/metasv/mvcutil/base58"
 	"golang.org/x/crypto/ripemd160"
 )
 

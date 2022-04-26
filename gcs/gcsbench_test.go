@@ -10,7 +10,7 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/metasv/bsvutil/gcs"
+	"github.com/metasv/mvcutil/gcs"
 )
 
 func genRandFilterElements(numElements uint) ([][]byte, error) {

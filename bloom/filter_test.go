@@ -9,10 +9,10 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/metasv/bsvd/chaincfg/chainhash"
-	"github.com/metasv/bsvd/wire"
-	"github.com/metasv/bsvutil"
-	"github.com/metasv/bsvutil/bloom"
+	"github.com/metasv/mvcd/chaincfg/chainhash"
+	"github.com/metasv/mvcd/wire"
+	"github.com/metasv/mvcutil"
+	"github.com/metasv/mvcutil/bloom"
 )
 
 // TestFilterLarge ensures a maximum sized filter can be created.
@@ -85,7 +85,7 @@ func TestFilterInsert(t *testing.T) {
 	got := bytes.NewBuffer(nil)
 	err = f.MsgFilterLoad().BsvEncode(got, wire.ProtocolVersion, wire.LatestEncoding)
 	if err != nil {
-		t.Errorf("TestFilterInsert BsvDecode failed: %v\n", err)
+		t.Errorf("TestFilterInsert mvcdecode failed: %v\n", err)
 		return
 	}
 
@@ -145,7 +145,7 @@ func TestFilterFPRange(t *testing.T) {
 		got := bytes.NewBuffer(nil)
 		err = f.MsgFilterLoad().BsvEncode(got, wire.ProtocolVersion, wire.LatestEncoding)
 		if err != nil {
-			t.Errorf("BsvDecode unexpected error: %v\n", err)
+			t.Errorf("mvcdecode unexpected error: %v\n", err)
 			continue
 		}
 		if !bytes.Equal(got.Bytes(), want) {
@@ -198,7 +198,7 @@ func TestFilterInsertWithTweak(t *testing.T) {
 	got := bytes.NewBuffer(nil)
 	err = f.MsgFilterLoad().BsvEncode(got, wire.ProtocolVersion, wire.LatestEncoding)
 	if err != nil {
-		t.Errorf("TestFilterInsertWithTweak BsvDecode failed: %v\n", err)
+		t.Errorf("TestFilterInsertWithTweak mvcdecode failed: %v\n", err)
 		return
 	}
 
@@ -214,7 +214,7 @@ func TestFilterInsertWithTweak(t *testing.T) {
 func TestFilterInsertKey(t *testing.T) {
 	secret := "5Kg1gnAjaLfKiwhhPpGS3QfRg2m6awQvaj98JCZBZQ5SuS2F15C"
 
-	wif, err := bsvutil.DecodeWIF(secret)
+	wif, err := mvcutil.DecodeWIF(secret)
 	if err != nil {
 		t.Errorf("TestFilterInsertKey DecodeWIF failed: %v", err)
 		return
@@ -222,7 +222,7 @@ func TestFilterInsertKey(t *testing.T) {
 
 	f := bloom.NewFilter(2, 0, 0.001, wire.BloomUpdateAll)
 	f.Add(wif.SerializePubKey())
-	f.Add(bsvutil.Hash160(wif.SerializePubKey()))
+	f.Add(mvcutil.Hash160(wif.SerializePubKey()))
 
 	want, err := hex.DecodeString("038fc16b080000000000000001")
 	if err != nil {
@@ -232,7 +232,7 @@ func TestFilterInsertKey(t *testing.T) {
 	got := bytes.NewBuffer(nil)
 	err = f.MsgFilterLoad().BsvEncode(got, wire.ProtocolVersion, wire.LatestEncoding)
 	if err != nil {
-		t.Errorf("TestFilterInsertWithTweak BsvDecode failed: %v\n", err)
+		t.Errorf("TestFilterInsertWithTweak mvcdecode failed: %v\n", err)
 		return
 	}
 
@@ -258,7 +258,7 @@ func TestFilterBloomMatch(t *testing.T) {
 		t.Errorf("TestFilterBloomMatch DecodeString failure: %v", err)
 		return
 	}
-	tx, err := bsvutil.NewTxFromBytes(strBytes)
+	tx, err := mvcutil.NewTxFromBytes(strBytes)
 	if err != nil {
 		t.Errorf("TestFilterBloomMatch NewTxFromBytes failure: %v", err)
 		return
@@ -293,7 +293,7 @@ func TestFilterBloomMatch(t *testing.T) {
 		0xf5, 0xfe, 0x95, 0xe7, 0x25, 0x59, 0xf2, 0xcc, 0x70,
 		0x43, 0xf9, 0x88, 0xac, 0x00, 0x00, 0x00, 0x00, 0x00}
 
-	spendingTx, err := bsvutil.NewTxFromBytes(spendingTxBytes)
+	spendingTx, err := mvcutil.NewTxFromBytes(spendingTxBytes)
 	if err != nil {
 		t.Errorf("TestFilterBloomMatch NewTxFromBytes failure: %v", err)
 		return
@@ -585,7 +585,7 @@ func TestFilterInsertP2PubKeyOnly(t *testing.T) {
 		t.Errorf("TestFilterInsertP2PubKeyOnly DecodeString failed: %v", err)
 		return
 	}
-	block, err := bsvutil.NewBlockFromBytes(blockBytes)
+	block, err := mvcutil.NewBlockFromBytes(blockBytes)
 	if err != nil {
 		t.Errorf("TestFilterInsertP2PubKeyOnly NewBlockFromBytes failed: %v", err)
 		return

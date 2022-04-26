@@ -1,21 +1,21 @@
-package bsvutil_test
+package mvcutil_test
 
 import (
 	"fmt"
 	"math"
 
-	"github.com/metasv/bsvutil"
+	"github.com/metasv/mvcutil"
 )
 
 func ExampleAmount() {
 
-	a := bsvutil.Amount(0)
+	a := mvcutil.Amount(0)
 	fmt.Println("Zero Satoshi:", a)
 
-	a = bsvutil.Amount(1e8)
+	a = mvcutil.Amount(1e8)
 	fmt.Println("100,000,000 Satoshis:", a)
 
-	a = bsvutil.Amount(1e5)
+	a = mvcutil.Amount(1e5)
 	fmt.Println("100,000 Satoshis:", a)
 	// Output:
 	// Zero Satoshi: 0 BSV
@@ -24,28 +24,28 @@ func ExampleAmount() {
 }
 
 func ExampleNewAmount() {
-	amountOne, err := bsvutil.NewAmount(1)
+	amountOne, err := mvcutil.NewAmount(1)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
 	fmt.Println(amountOne) //Output 1
 
-	amountFraction, err := bsvutil.NewAmount(0.01234567)
+	amountFraction, err := mvcutil.NewAmount(0.01234567)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
 	fmt.Println(amountFraction) //Output 2
 
-	amountZero, err := bsvutil.NewAmount(0)
+	amountZero, err := mvcutil.NewAmount(0)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
 	fmt.Println(amountZero) //Output 3
 
-	amountNaN, err := bsvutil.NewAmount(math.NaN())
+	amountNaN, err := mvcutil.NewAmount(math.NaN())
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -59,13 +59,13 @@ func ExampleNewAmount() {
 }
 
 func ExampleAmount_unitConversions() {
-	amount := bsvutil.Amount(44433322211100)
+	amount := mvcutil.Amount(44433322211100)
 
-	fmt.Println("Satoshi to kBSV:", amount.Format(bsvutil.AmountKiloBSV))
+	fmt.Println("Satoshi to kBSV:", amount.Format(mvcutil.AmountKiloBSV))
 	fmt.Println("Satoshi to BSV:", amount)
-	fmt.Println("Satoshi to MilliBSV:", amount.Format(bsvutil.AmountMilliBSV))
-	fmt.Println("Satoshi to MicroBSV:", amount.Format(bsvutil.AmountMicroBSV))
-	fmt.Println("Satoshi to Satoshi:", amount.Format(bsvutil.AmountSatoshi))
+	fmt.Println("Satoshi to MilliBSV:", amount.Format(mvcutil.AmountMilliBSV))
+	fmt.Println("Satoshi to MicroBSV:", amount.Format(mvcutil.AmountMicroBSV))
+	fmt.Println("Satoshi to Satoshi:", amount.Format(mvcutil.AmountSatoshi))
 
 	// Output:
 	// Satoshi to kBSV: 444.333222111 kBSV
